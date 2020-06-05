@@ -1,4 +1,4 @@
-# Navigation_gym_DQL
+# Navigation in a Unity Banana World
 
 ## Introduction
 
@@ -12,7 +12,7 @@ The target environment is a 3D environment, that provides a ray based vision of 
 
 ![banana_environment_gif](https://user-images.githubusercontent.com/10624937/42135619-d90f2f28-7d12-11e8-8823-82b970a54d7e.gif)
 
-The state consists of these state values and a velocity value(s). The state vector is not detailed any further. Rewards are +1 for collectiong a yellow (ripe) banana and -1 for collecting a blue (stale) banana. 
+The state consists of these state values and velocity value(s). The state vector is not detailed any further. Rewards are +1 for collectiong a yellow (ripe) banana and -1 for collecting a blue (stale) banana. 
 
 Four discrete actions are available: 
  - 0 - move forward.
@@ -83,7 +83,7 @@ brain = env.brains[brain_name]
 
 pps = ProjectParameters(
     #training parameters
-        seed = 0,
+        seed=0,
         tau=0.01, 
         batch_size=64, 
         gamma=0.975, 
@@ -108,6 +108,6 @@ pps = ProjectParameters(
         mean_window_size=20    
 )
 
-agent = Agent(env, project_parameters_instance)
+agent = Agent(env, pps)
 agent.run_session()
 ```
