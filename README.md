@@ -32,11 +32,10 @@ A DQL model with 2 fully connected 1D layers with relu transfer functions, apply
 
 ## Solution & Hyperparameters
 
-The model succesfully converged at epoch 362. Showing an average of 13.52 for the last 100 epoch with the following parameters.
+The model succesfully converged at epoch 241. Showing an average of 13.08 for the last 100 episodes/epochs with the following parameters.
 
 - training parameters
-  - tau: 1.0 (tau)
-  - seed: 0 (seed)
+  - tau: 1.0 (tau) /irrelevant, because full update is used/
   - batch size: 32 (batch_size) 
   - gamma: 0.95 (gamma)
   - learning rate: 0.0002 (lr) 
@@ -54,7 +53,7 @@ The model succesfully converged at epoch 362. Showing an average of 13.52 for th
   - layer-1 neuron count: 128 (fcn1)
   - layer-2 neuron count: 64 (fcn2)
 - experience buffer parameters
-  - buffer length: 50000 (buffer_length)
+  - buffer length: 20000 (buffer_length)
 - communication parameters
   - print info every x episode: 10 (print_every)
   - score mean window size: 100 (mean_window_size)    
@@ -70,6 +69,10 @@ The model succesfully converged at epoch 362. Showing an average of 13.52 for th
 - Run the Navigate.ipynb notebook
 
 \*(higher might work, but not guaranteed)
+
+## Saved model parameter-sets
+- navigation_state_dict_local.tsf
+- navigation_state_dict_target.tsf
 
 ## Changing the model & Using the objects
 
